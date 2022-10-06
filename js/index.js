@@ -56,6 +56,8 @@ window.onload=function(){
     var obj=[];
     var high=[];
     for(r=0;r<content.length;r++){
+        console.log(document.getElementsByTagName("img")[r].src);
+        console.log("images/"+document.getElementsByTagName("img")[r].src.split("/")[4]);
         obj[r]={
             "image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4],
             "name":document.getElementsByClassName("name")[r].innerHTML,
