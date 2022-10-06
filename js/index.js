@@ -66,6 +66,7 @@ window.onload=function(){
         high[r]=Number.parseFloat(document.getElementsByClassName("score")[r].innerHTML) ;
     }
     console.log(obj);
+    var fn=document.getElementById("filterName");
     one.onclick=function(){
         var m =[2,1,3,0,4];
         var img=document.getElementsByTagName("img");
@@ -79,7 +80,7 @@ window.onload=function(){
             score[i].innerHTML=obj[m[i]].score;
             money[i].innerHTML=obj[m[i]].money;
         }
-        
+        fn.innerHTML="依照價格";
     };
     two.onclick=function(){
         var m =[0,4,3,1,2];
@@ -94,7 +95,7 @@ window.onload=function(){
             score[i].innerHTML=obj[m[i]].score;
             money[i].innerHTML=obj[m[i]].money;
         }
-        
+        fn.innerHTML="依照評分";
     };
     
 
