@@ -1,0 +1,170 @@
+.all{
+    width:820px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.list{
+    width: 20%;
+    margin-top: 16px;
+}
+.main{
+    width: 75%;
+}
+.title{
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.check-all{
+    border: 1px solid gray;
+}
+.check-title{
+    line-height: 3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.check-title:hover{
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+}
+.check-list{
+    padding-left: 5px;
+    line-height: 2.5;
+    padding-bottom: 5px;
+}
+.ready{
+    width: 150px;
+    background-color:transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+.ready:hover{
+    cursor: pointer;
+    background: brown;
+    color: white;
+}
+.main-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: relative;
+}
+.text{
+    padding: 8px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    font-size: 24px;
+}
+.filter{
+    border: 1px solid gray;
+    line-height: 100%;
+    padding: 11px;
+}
+.filter:hover{
+    cursor: pointer;
+    background: rgb(203, 203, 203);
+    color: white;
+}
+.content{
+    width: 100%;
+    display: flex;
+}
+.img-all{
+    width: 40%;
+}
+.img-all>img{
+    margin-top: 8px;
+    width: 100%;
+}
+.content-all{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content-text{
+    width: 60%;
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 13px;
+}
+.name{
+    line-height: 2;
+    font-size: 20px;
+    padding-left:11px;
+}
+.location{
+    line-height: 1.1;
+    font-size: 14px;
+    color: red;
+    margin-bottom: 5px;
+    padding-left: 11px;
+}
+.intro{
+    font-size: 11px;
+    color: gray;
+    text-align: justify;
+    line-height: 1.4;
+    padding-left:11px;
+    padding-right: 11px;
+    padding-bottom: 1;
+}
+.ct-m{
+    width:77%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.dollar{
+    width:23%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    position: relative;
+}
+.score{
+    position: absolute;
+    padding: 5px;
+    background: red;
+    color: white;
+    top:8px;
+    right:5px;
+}
+.money{
+    position: absolute;
+    bottom: 10px;
+    right:5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hide{
+    display: none;
+}
+
+.filter-text{
+    position: absolute;  
+    right:0px;
+    bottom:-50px;
+    width: 103px;
+    line-height: 1.5;
+    text-align: center;
+    background: white;
+    display: none;
+    z-index: 1000;
+    border-left:1px solid gray ;
+    border-right:1px solid gray ;
+    border-bottom:1px solid gray ;
+}
+.one:hover,.two:hover{
+    background: gray;
+    color: white;
+    cursor: pointer;
+}
+.show{
+    display: block;
+}

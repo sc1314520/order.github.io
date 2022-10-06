@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/jquery2.2.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>線上訂房系統</title>
+</head>
+<body>
+    <div class="all">
+        <div class="list">
+            <div class="title"><br>透過以下分類收尋</div>
+            <div class="check-all">
+                <div class="check-title">飯店設施&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-caret-down"></i></div>
+                <div class="check-list">
+                    <input type="checkbox" name="" id="c1">免費無線網路<br>
+                    <input type="checkbox" name="" id="c2">無菸客房<br>
+                    <input type="checkbox" name="" id="c3">廚房<br>
+                    <input type="checkbox" name="" id="c4">洗衣房<br>
+                    <input type="checkbox" name="" id="c5">停車場<br>
+                    <input type="checkbox" name="" id="c6">寵物友善<br>
+                    <button id="ready" class="ready">搜尋</button>
+                    <button id="reset" class="ready" style="display: none;">重置</button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-title">
+                <div class="text"><h1>找到<span id="how"> 5 </span>間住宿</h1></div>
+                <div class="filter">為您精選 <i class="fa-solid fa-caret-down"></i></div>
+                <div class="filter-text">
+                    <div class="one" id="one">依照價格</div>
+                    <div class="two" id="two">依照評分</div>
+                </div>
+            </div>
+            <div class="content-all" >
+                <div class="content" id="1">
+                    <div class="img-all">
+                        <img src="images/first.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="ct-m">
+                            <h2 class="name">台北西門町意舍酒店</h2>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> 台北市</p>
+                            <p class="intro">台北西門町意舍酒店距離捷運西門站步行 7分鐘，設有餐廳、洗衣服務和全館免費 WiFi，提供現代化的環保住宿。所有客房均裝潢典雅且空間寬敞，設有空調、平面有線電視、休息區、私人衛浴、吹風機、高級盥洗用品和室內拖鞋，提供舒適的住宿體驗。</p>
+                        </div>
+                        <div class="dollar">
+                            <div class="score">4.5</div>
+                            <div class="money">NT$1,733 起</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="2">
+                    <div class="img-all">
+                        <img src="images/second.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="ct-m">
+                            <h2 class="name">和苑三井花園飯店</h2>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> 台北市</p>
+                            <p class="intro">MGH Mitsui Garden Hotel Taipei Zhongxiao 位於台北，距離大安森林公园 1.7 公里，享有市景。這間住宿提供的設施與服務包括餐廳、24 小時接待櫃檯、共用休息室以及全館 WiFi（免費）。住宿有禮賓服務、行李寄放服務和外幣兌換服務。</p>
+                        </div>
+                        <div class="dollar">
+                            <div class="score">4.1</div>
+                            <div class="money">NT$2,040 起</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="3">
+                    <div class="img-all">
+                        <img src="images/third.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="ct-m">
+                            <h2 class="name">富驛時尚酒店</h2>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> 台北市</p>
+                            <p class="intro">富驛時尚酒店- 南京東路館位於台北，距離熱鬧的遼寧夜市步行僅需 5 分鐘即可到達。館內設有 1 間餐廳、健身中心和設有平面電視和空調的客房，並提供免費的無線網路。 富驛時尚酒店- 南京東路館距離捷運南京復興站步行僅需 1 分鐘，距離台北火車站有 10 分鐘車程。</p>
+                        </div>
+                        <div class="dollar">
+                            <div class="score">4.0</div>
+                            <div class="money">NT$2,682 起</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="4">
+                    <div class="img-all">
+                        <img src="images/fourth.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="ct-m">
+                            <h2 class="name">台北馥敦飯店復南館</h2>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> 台北市</p>
+                            <p class="intro">台北馥敦飯店提供設備齊全的健身中心、2 間餐廳和免費網路。 飯店距離國父紀念館和台北 101 皆為 10 分鐘車程，距離桃園國際機場 32 公里。 客房配有現代化裝潢和大型窗戶，並提供空調。所有客房均設有 iPod 基座和平面有線電視。 客人可在禪意花園中漫步或在桑拿放鬆。</p>
+                        </div>
+                        <div class="dollar">
+                            <div class="score">4.2</div>
+                            <div class="money">NT$1,873 起</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="5">
+                    <div class="img-all">
+                        <img src="images/fifth.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <div class="ct-m">
+                            <h2 class="name">旅樂序精品旅館站前五館</h2>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> 台北市</p>
+                            <p class="intro">旅樂序精品旅館站前五館位於台北，距離台北車站 5 分鐘步行路程，提供可享市景的客房。所有客房均提供免費 WiFi。 旅樂序精品旅館站前五館距離西門町購物商圈 8 分鐘步行路程，距離總統府 10 分鐘步行路程，最近的機場是台北松山機場，搭乘捷運 6 站即可抵達。</p>
+                        </div>
+                        <div class="dollar">
+                            <div class="score">4.4</div>
+                            <div class="money">NT$1,643 起</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://kit.fontawesome.com/026fbb8b51.js" crossorigin="anonymous"></script>
+</body>
+</html>
