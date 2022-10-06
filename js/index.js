@@ -1,5 +1,4 @@
 window.onload=function(){
-    alert("因GitHub隱私條款，排序功能可能會有缺陷。敬請見諒。完整體驗，歡迎下載閱覽。");
     var content =document.getElementsByClassName("content");
     var check =document.getElementsByTagName("input");
     var btn =document.getElementById("ready");
@@ -58,7 +57,8 @@ window.onload=function(){
     var high=[];
     for(r=0;r<content.length;r++){
         obj[r]={
-            "image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4],
+            //"image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4], <-- 下載後使用
+            "image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[5], // <-- github pages
             "name":document.getElementsByClassName("name")[r].innerHTML,
             "location":document.getElementsByClassName("intro")[r].innerHTML,
             "score":document.getElementsByClassName("score")[r].innerHTML,
