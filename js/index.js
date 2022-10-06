@@ -58,7 +58,7 @@ window.onload=function(){
     for(r=0;r<content.length;r++){
         obj[r]={
             //"image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4],
-            "image":document.getElementsByTagName("img")[r].src;
+            "image":document.getElementsByTagName("img")[r].src,
             "name":document.getElementsByClassName("name")[r].innerHTML,
             "location":document.getElementsByClassName("intro")[r].innerHTML,
             "score":document.getElementsByClassName("score")[r].innerHTML,
