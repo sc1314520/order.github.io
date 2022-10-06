@@ -1,4 +1,5 @@
 window.onload=function(){
+    alert("因GitHub隱私條款，排序功能可能會有缺陷。敬請見諒。完整體驗，歡迎下載閱覽。");
     var content =document.getElementsByClassName("content");
     var check =document.getElementsByTagName("input");
     var btn =document.getElementById("ready");
@@ -67,8 +68,7 @@ window.onload=function(){
     }
     console.log(obj);
     var fn=document.getElementById("filterName");
-    one.onclick=function(){
-        alert("因隱私條款，此功能可能會有缺陷。敬請見諒");
+    one.onclick=function(){  
         var m =[2,1,3,0,4];
         var img=document.getElementsByTagName("img");
         var name=document.getElementsByClassName("name");
@@ -84,7 +84,6 @@ window.onload=function(){
         fn.innerHTML="依照價格";
     };
     two.onclick=function(){
-        alert("因隱私條款，此功能可能會有缺陷。敬請見諒");
         var m =[0,4,3,1,2];
         var img=document.getElementsByTagName("img");
         var name=document.getElementsByClassName("name");
