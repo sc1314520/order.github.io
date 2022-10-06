@@ -56,8 +56,6 @@ window.onload=function(){
     var obj=[];
     var high=[];
     for(r=0;r<content.length;r++){
-        console.log(document.getElementsByTagName("img")[r].src);
-        console.log("images/"+document.getElementsByTagName("img")[r].src.split("/")[4]);
         obj[r]={
             "image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4],
             "name":document.getElementsByClassName("name")[r].innerHTML,
@@ -70,6 +68,7 @@ window.onload=function(){
     console.log(obj);
     var fn=document.getElementById("filterName");
     one.onclick=function(){
+        alert("因隱私條款，此功能可能會有缺陷。敬請見諒");
         var m =[2,1,3,0,4];
         var img=document.getElementsByTagName("img");
         var name=document.getElementsByClassName("name");
@@ -85,6 +84,7 @@ window.onload=function(){
         fn.innerHTML="依照價格";
     };
     two.onclick=function(){
+        alert("因隱私條款，此功能可能會有缺陷。敬請見諒");
         var m =[0,4,3,1,2];
         var img=document.getElementsByTagName("img");
         var name=document.getElementsByClassName("name");
