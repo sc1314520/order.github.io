@@ -4,6 +4,8 @@ window.onload=function(){
     var btn =document.getElementById("ready");
     var btn2 =document.getElementById("reset");
     var how =document.getElementById("how");
+    var filter =document.getElementById("filter");
+    var ft =document.getElementById("filter-text");
     var x=0;
     content[0].pro=[0,1,2];
     content[1].pro=[1,2,3];
@@ -11,6 +13,8 @@ window.onload=function(){
     content[3].pro=[3,4,5];
     content[4].pro=[4,5];
     btn.onclick=function(){
+        filter.setAttribute('style','cursor:not-allowed;');
+        ft.setAttribute('style','pointer-events:none;');
         btn.setAttribute('style','display:none');
         btn2.setAttribute('style','display:block');
         for(var z=0;z<content.length;z++){
@@ -29,6 +33,8 @@ window.onload=function(){
 
     }
     btn2.onclick=function(){
+        filter.setAttribute('style','cursor:pointer');
+        ft.setAttribute('style','pointer-events:;');
         how.innerHTML=" 5 ";
         x=0;
         btn.setAttribute('style','display:block');
