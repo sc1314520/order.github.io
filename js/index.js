@@ -53,52 +53,46 @@ window.onload=function(){
     }
     var one =document.getElementById("one");
     var two =document.getElementById("two");
+    var fn=document.getElementById("filterName");
+    var img=document.getElementsByTagName("img");
+    var name=document.getElementsByClassName("name");
+    var score=document.getElementsByClassName("score");
+    var money=document.getElementsByClassName("money");
+    var intro =document.getElementsByClassName("intro");
     var obj=[];
     var high=[];
     for(r=0;r<content.length;r++){
         obj[r]={
-            //"image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[4], <-- 下載後使用
-            "image":"images/"+document.getElementsByTagName("img")[r].src.split("/")[5], // <-- github pages
-            "name":document.getElementsByClassName("name")[r].innerHTML,
-            "location":document.getElementsByClassName("intro")[r].innerHTML,
-            "score":document.getElementsByClassName("score")[r].innerHTML,
-            "money":document.getElementsByClassName("money")[r].innerHTML
+            "index":r,
+            "image":"images/"+img[r].src.split("/")[4], //<-- 下載後使用
+            //"image":"images/"+img[r].src.split("/")[5], // <-- github pages
+            "name":name[r].innerHTML,
+            "intro":intro[r].innerHTML,
+            "score":score[r].innerHTML,
+            "money":money[r].innerHTML
         }
         high[r]=Number.parseFloat(document.getElementsByClassName("score")[r].innerHTML) ;
     }
     console.log(obj);
-    var fn=document.getElementById("filterName");
     one.onclick=function(){  
         var m =[2,1,3,0,4];
-        var img=document.getElementsByTagName("img");
-        var name=document.getElementsByClassName("name");
-        var score=document.getElementsByClassName("score");
-        var money=document.getElementsByClassName("money");
         //2,1,3,0,4
-        for(var i=0;i<m.length;i++){
-            img[i].src=obj[m[i]].image;
-            name[i].innerHTML=obj[m[i]].name;
-            score[i].innerHTML=obj[m[i]].score;
-            money[i].innerHTML=obj[m[i]].money;
-        }
-        fn.innerHTML="依照價格";
+        set(m,"依照價格");
     };
     two.onclick=function(){
         var m =[0,4,3,1,2];
-        var img=document.getElementsByTagName("img");
-        var name=document.getElementsByClassName("name");
-        var score=document.getElementsByClassName("score");
-        var money=document.getElementsByClassName("money");
-        //0,4,3,1,2
+        set(m,"依照評分");
+    };
+    function set(m,str){
         for(var i=0;i<m.length;i++){
             img[i].src=obj[m[i]].image;
             name[i].innerHTML=obj[m[i]].name;
             score[i].innerHTML=obj[m[i]].score;
             money[i].innerHTML=obj[m[i]].money;
+            intro[i].innerHTML=obj[m[i]].intro;
         }
-        fn.innerHTML="依照評分";
-    };
-    
+        fn.innerHTML=str;
+    }
 
 
     
