@@ -62,6 +62,7 @@ window.onload=function(){
     var obj=[];
     var high=[];
     var bys = [];
+    var bym=[];
     for(r=0;r<content.length;r++){
         obj[r]={
             "index":r,
@@ -74,35 +75,33 @@ window.onload=function(){
         }
         high[r]=Number.parseFloat(score[r].innerHTML) ;
         bys[r]=[obj[r]];
+        bym[r]=[obj[r]];
     }
     bys.sort(function(o1,o2){
         console.log();
-        return parseFloat(o1.score)-parseFloat(o2.score);
+        return parseFloat(o2[0].score)-parseFloat(o1[0].score);
     });
-    console.log(bys);
-    console.log(obj);
+    bym.sort(function(o1,o2){
+        console.log();
+        return parseInt(o2[0].money.split(' ')[1].split(",")[0]+o2[0].money.split(' ')[1].split(",")[1])-parseInt(o1[0].money.split(' ')[1].split(",")[0]+o1[0].money.split(' ')[1].split(",")[1]);
+    });
+    console.log(bym);
     one.onclick=function(){  
-        var m =[2,1,3,0,4];
-        //2,1,3,0,4
-        set(m,"依照價格");
+        set(bym,"依照價格");
     };
     two.onclick=function(){
-        var m =[0,4,3,1,2];
-        set(m,"依照評分");
+        set(bys,"依照評分");
     };
     function set(m,str){
         for(var i=0;i<m.length;i++){
-            img[i].src=obj[m[i]].image;
-            name[i].innerHTML=obj[m[i]].name;
-            score[i].innerHTML=obj[m[i]].score;
-            money[i].innerHTML=obj[m[i]].money;
-            intro[i].innerHTML=obj[m[i]].intro;
+            img[i].src=m[i][0].image;
+            name[i].innerHTML=m[i][0].name;
+            score[i].innerHTML=m[i][0].score;
+            money[i].innerHTML=m[i][0].money;
+            intro[i].innerHTML=m[i][0].intro;
         }
         fn.innerHTML=str;
     }
-
-
-    
 };
 $(document).ready(function () {
     $('.check-title').click(function (event) {
