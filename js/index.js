@@ -61,18 +61,25 @@ window.onload=function(){
     var intro =document.getElementsByClassName("intro");
     var obj=[];
     var high=[];
+    var bys = [];
     for(r=0;r<content.length;r++){
         obj[r]={
             "index":r,
-            "image":"images/"+img[r].src.split("/")[4], //<-- 下載後使用
-            //"image":"images/"+img[r].src.split("/")[5], // <-- github pages
+            //"image":"images/"+img[r].src.split("/")[4], //<-- 下載後使用
+            "image":"images/"+img[r].src.split("/")[5], // <-- github pages
             "name":name[r].innerHTML,
             "intro":intro[r].innerHTML,
             "score":score[r].innerHTML,
             "money":money[r].innerHTML
         }
-        high[r]=Number.parseFloat(document.getElementsByClassName("score")[r].innerHTML) ;
+        high[r]=Number.parseFloat(score[r].innerHTML) ;
+        bys[r]=[obj[r]];
     }
+    bys.sort(function(o1,o2){
+        console.log();
+        return parseFloat(o1.score)-parseFloat(o2.score);
+    });
+    console.log(bys);
     console.log(obj);
     one.onclick=function(){  
         var m =[2,1,3,0,4];
